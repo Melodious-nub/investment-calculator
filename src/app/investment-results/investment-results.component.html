@@ -1,0 +1,28 @@
+@if (recivedData.length == 0) {
+    <p style="text-align: center;">Please enter some value and press "Calculate"</p>
+} @else {
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Annual Investment</th>
+                <th>Interest</th>
+                <th>Total Amount Invested</th>
+                <th>Total Interest</th>                
+                <th>Value End Of Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (r of recivedData; track $index) {
+                <tr>
+                    <td>{{r.year}}</td>
+                    <td>{{r.annualInvestment}}</td>
+                    <td>{{r.interest}}</td>
+                    <td>{{r.totalAmountInvested}}</td>
+                    <td>{{r.totalInterest}}</td>
+                    <td>{{r.valueEndOfYear}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
